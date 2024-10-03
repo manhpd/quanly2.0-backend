@@ -25,6 +25,10 @@ class EnvironmentVariablesValidator {
   @IsString()
   DATABASE_HOST: string;
 
+  @ValidateIf((envValues) => !envValues.DATABASE_DRIVER)
+  @IsString()
+  DATABASE_DRIVER: string;
+
   @ValidateIf((envValues) => !envValues.DATABASE_URL)
   @IsInt()
   @Min(0)

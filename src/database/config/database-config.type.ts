@@ -3,6 +3,7 @@ export type DatabaseConfig = {
   url?: string;
   type?: string;
   host?: string;
+  driver?: string;
   port?: number;
   password?: string;
   name?: string;
